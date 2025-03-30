@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Download high-quality wallpapers from WallArtVault. Choose from various resolutions and customize for any device."
+    />
+    <title>Download Wallpaper - WallArtVault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ImageObject",
+        "name": "Wallpaper Download",
+        "contentUrl": "https://www.wallartvault.com/images/wallpaper_preview.jpg",
+        "thumbnailUrl": "https://www.wallartvault.com/images/wallpaper_thumbnail.jpg",
+        "datePublished": "2025",
+        "description": "High-quality wallpaper available for download in multiple resolutions",
+        "license": "https://www.wallartvault.com/terms-of-service.html"
+      }
+    </script>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-XXXXX-Y");
+    </script>
+  </head>
+  <body>
+    <header class="categories-header">
+      <nav class="index-nav">
+        <div class="index-nav-left">
+          <a href="index.html" class="nav-logo">
+            <span class="nav-logo-icon">🎨</span>
+            <span>WallArtVault</span>
+          </a>
+          <a href="index.html">Home</a>
+          <a href="categories.html">Categories</a>
+          <a href="blog.html">Blog</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="index-nav-right">
+          <a href="sign-in.html">Sign In</a>
+        </div>
+      </nav>
+    </header>
+    <main class="download-page" id="downloadPage">
+      <div class="theme-toggle-container">
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-paint-brush"></i>
+          <span id="themeText">Blue Theme</span>
+        </button>
+      </div>
+      <div class="download-container">
+        <div class="download-preview">
+          <img id="preview-image" src="" alt="Wallpaper Preview" />
+          <div class="preview-overlay">
+            <button class="preview-fullscreen">
+              <i class="fas fa-expand"></i>
+            </button>
+          </div>
+        </div>
+        <div class="download-info">
+          <div class="download-header">
+            <h1 id="wallpaper-title">Wallpaper Title</h1>
+            <div class="wallpaper-meta">
+              <span id="wallpaper-category"
+                ><i class="fas fa-folder"></i> Category</span
+              >
+              <span id="wallpaper-resolution"
+                ><i class="fas fa-expand-arrows-alt"></i> Resolution</span
+              >
+              <span id="wallpaper-downloads"
+                ><i class="fas fa-download"></i> 0 Downloads</span
+              >
+            </div>
+          </div>
+          <div class="download-options">
+            <h2>Select Resolution</h2>
+            <div class="resolution-buttons">
+              <button class="download-btn" data-resolution="1920x1080">
+                <i class="fas fa-desktop"></i>
+                <span>
+                  <strong>1920x1080</strong>
+                  <small>Full HD</small>
+                </span>
+              </button>
+              <button class="download-btn" data-resolution="2560x1440">
+                <i class="fas fa-desktop"></i>
+                <span>
+                  <strong>2560x1440</strong>
+                  <small>2K QHD</small>
+                </span>
+              </button>
+              <button class="download-btn" data-resolution="3840x2160">
+                <i class="fas fa-tv"></i>
+                <span>
+                  <strong>3840x2160</strong>
+                  <small>4K Ultra HD</small>
+                </span>
+              </button>
+              <button class="download-btn" data-resolution="mobile">
+                <i class="fas fa-mobile-alt"></i>
+                <span>
+                  <strong>Mobile</strong>
+                  <small>Portrait</small>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="wallpaper-actions">
+            <button class="favorite-btn">
+              <i class="fas fa-heart"></i> Add to Favorites
+            </button>
+            <button class="share-btn">
+              <i class="fas fa-share"></i> Share
+            </button>
+          </div>
+          <div class="wallpaper-tags">
+            <h3>Tags</h3>
+            <div class="tags-container">
+              <span class="tag">Nature</span>
+              <span class="tag">Landscape</span>
+              <span class="tag">Mountains</span>
+              <span class="tag">HD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <p>&copy; 2024 WallArtVault. All rights reserved.</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+    <script>
+      // Theme toggle functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const themeToggle = document.getElementById("themeToggle");
+        const downloadPage = document.getElementById("downloadPage");
+        const themeText = document.getElementById("themeText");
+
+        // Check if there's a saved theme preference
+        const savedTheme = localStorage.getItem("downloadPageTheme");
+        if (savedTheme === "blue") {
+          downloadPage.classList.add("blue-theme");
+          themeText.innerText = "Default Theme";
+        }
+
+        themeToggle.addEventListener("click", function () {
+          if (downloadPage.classList.contains("blue-theme")) {
+            // Switch to default theme
+            downloadPage.classList.remove("blue-theme");
+            themeText.innerText = "Blue Theme";
+            localStorage.setItem("downloadPageTheme", "default");
+          } else {
+            // Switch to blue theme
+            downloadPage.classList.add("blue-theme");
+            themeText.innerText = "Default Theme";
+            localStorage.setItem("downloadPageTheme", "blue");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

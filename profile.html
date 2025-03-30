@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile - WallArtVault</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="index-nav">
+      <div class="index-nav-left">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-icon">🎨</span>
+          <span>WallArtVault</span>
+        </a>
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="blog.html">Blog</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="index-nav-right">
+        <div class="user-menu">
+          <img src="images/user-avatar.jpg" alt="User" class="user-avatar" />
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </nav>
+
+    <main class="profile-page">
+      <div class="profile-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+          <div class="profile-cover">
+            <img src="images/profile-cover.jpg" alt="Cover" />
+            <button class="edit-cover">
+              <i class="fas fa-camera"></i>
+            </button>
+          </div>
+          <div class="profile-info">
+            <div class="profile-avatar">
+              <img src="images/user-avatar.jpg" alt="User" />
+              <button class="edit-avatar">
+                <i class="fas fa-camera"></i>
+              </button>
+            </div>
+            <div class="profile-details">
+              <div class="profile-name-section">
+                <h1>John Doe</h1>
+                <span class="verified-badge">
+                  <i class="fas fa-check-circle"></i>
+                  Verified Artist
+                </span>
+              </div>
+              <p class="username">@johndoe</p>
+              <p class="bio">
+                Wallpaper enthusiast and digital art lover. Creating beautiful
+                wallpapers for your devices.
+              </p>
+              <div class="profile-stats">
+                <div class="stat">
+                  <span class="stat-value">128</span>
+                  <span class="stat-label">Downloads</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">45</span>
+                  <span class="stat-label">Favorites</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">12</span>
+                  <span class="stat-label">Uploads</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-value">Premium</span>
+                  <span class="stat-label">Account</span>
+                </div>
+              </div>
+              <div class="profile-actions">
+                <button class="edit-profile-btn">
+                  <i class="fas fa-edit"></i>
+                  Edit Profile
+                </button>
+                <button class="share-profile-btn">
+                  <i class="fas fa-share"></i>
+                  Share Profile
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="profile-content">
+          <div class="profile-tabs">
+            <button class="tab-btn active" data-tab="downloads">
+              <i class="fas fa-download"></i>
+              Downloads
+            </button>
+            <button class="tab-btn" data-tab="favorites">
+              <i class="fas fa-heart"></i>
+              Favorites
+            </button>
+            <button class="tab-btn" data-tab="uploads">
+              <i class="fas fa-upload"></i>
+              Uploads
+            </button>
+            <button class="tab-btn" data-tab="collections">
+              <i class="fas fa-folder"></i>
+              Collections
+            </button>
+            <button class="tab-btn" data-tab="settings">
+              <i class="fas fa-cog"></i>
+              Settings
+            </button>
+          </div>
+
+          <!-- Downloads Tab -->
+          <div class="tab-content active" id="downloads">
+            <div class="content-header">
+              <h2>Downloaded Wallpapers</h2>
+              <div class="content-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Recent</button>
+                <button class="filter-btn">Popular</button>
+              </div>
+            </div>
+            <div class="downloads-grid">
+              <!-- Downloads will be dynamically added here -->
+            </div>
+          </div>
+
+          <!-- Favorites Tab -->
+          <div class="tab-content" id="favorites">
+            <div class="content-header">
+              <h2>Favorite Wallpapers</h2>
+              <div class="content-filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Recent</button>
+                <button class="filter-btn">Popular</button>
+              </div>
+            </div>
+            <div class="favorites-grid">
+              <!-- Favorites will be dynamically added here -->
+            </div>
+          </div>
+
+          <!-- Uploads Tab -->
+          <div class="tab-content" id="uploads">
+            <div class="content-header">
+              <h2>Your Uploads</h2>
+              <button class="upload-btn">
+                <i class="fas fa-plus"></i>
+                Upload New
+              </button>
+            </div>
+            <div class="uploads-grid">
+              <!-- Uploads will be dynamically added here -->
+            </div>
+          </div>
+
+          <!-- Collections Tab -->
+          <div class="tab-content" id="collections">
+            <div class="content-header">
+              <h2>Your Collections</h2>
+              <button class="create-collection-btn">
+                <i class="fas fa-plus"></i>
+                Create Collection
+              </button>
+            </div>
+            <div class="collections-grid">
+              <!-- Collections will be dynamically added here -->
+            </div>
+          </div>
+
+          <!-- Settings Tab -->
+          <div class="tab-content" id="settings">
+            <div class="settings-container">
+              <div class="settings-sidebar">
+                <button class="settings-nav-btn active" data-section="profile">
+                  <i class="fas fa-user"></i>
+                  Profile Settings
+                </button>
+                <button class="settings-nav-btn" data-section="account">
+                  <i class="fas fa-shield-alt"></i>
+                  Account Security
+                </button>
+                <button class="settings-nav-btn" data-section="notifications">
+                  <i class="fas fa-bell"></i>
+                  Notifications
+                </button>
+                <button class="settings-nav-btn" data-section="preferences">
+                  <i class="fas fa-sliders-h"></i>
+                  Preferences
+                </button>
+                <button class="settings-nav-btn" data-section="billing">
+                  <i class="fas fa-credit-card"></i>
+                  Billing
+                </button>
+              </div>
+              <div class="settings-content">
+                <!-- Profile Settings -->
+                <div class="settings-section active" id="profile-settings">
+                  <h2>Profile Settings</h2>
+                  <form class="settings-form">
+                    <div class="form-group">
+                      <label>Display Name</label>
+                      <input type="text" value="John Doe" />
+                    </div>
+                    <div class="form-group">
+                      <label>Username</label>
+                      <input type="text" value="@johndoe" />
+                    </div>
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input type="email" value="john@example.com" />
+                    </div>
+                    <div class="form-group">
+                      <label>Bio</label>
+                      <textarea>
+Wallpaper enthusiast and digital art lover.</textarea
+                      >
+                    </div>
+                    <div class="form-group">
+                      <label>Website</label>
+                      <input
+                        type="url"
+                        placeholder="https://your-website.com"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Location</label>
+                      <input type="text" placeholder="City, Country" />
+                    </div>
+                    <div class="form-actions">
+                      <button type="submit" class="save-settings">
+                        Save Changes
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Account Security -->
+                <div class="settings-section" id="account-settings">
+                  <h2>Account Security</h2>
+                  <form class="settings-form">
+                    <div class="form-group">
+                      <label>Current Password</label>
+                      <input type="password" />
+                    </div>
+                    <div class="form-group">
+                      <label>New Password</label>
+                      <input type="password" />
+                    </div>
+                    <div class="form-group">
+                      <label>Confirm New Password</label>
+                      <input type="password" />
+                    </div>
+                    <div class="form-group">
+                      <label>Two-Factor Authentication</label>
+                      <div class="toggle-switch">
+                        <input type="checkbox" id="2fa-toggle" />
+                        <label for="2fa-toggle"></label>
+                      </div>
+                    </div>
+                    <div class="form-actions">
+                      <button type="submit" class="save-settings">
+                        Update Security
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Notifications -->
+                <div class="settings-section" id="notification-settings">
+                  <h2>Notification Preferences</h2>
+                  <form class="settings-form">
+                    <div class="form-group">
+                      <label>Email Notifications</label>
+                      <div class="toggle-switch">
+                        <input
+                          type="checkbox"
+                          id="email-notifications"
+                          checked
+                        />
+                        <label for="email-notifications"></label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Push Notifications</label>
+                      <div class="toggle-switch">
+                        <input
+                          type="checkbox"
+                          id="push-notifications"
+                          checked
+                        />
+                        <label for="push-notifications"></label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>New Followers</label>
+                      <div class="toggle-switch">
+                        <input
+                          type="checkbox"
+                          id="followers-notifications"
+                          checked
+                        />
+                        <label for="followers-notifications"></label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Download Updates</label>
+                      <div class="toggle-switch">
+                        <input
+                          type="checkbox"
+                          id="download-notifications"
+                          checked
+                        />
+                        <label for="download-notifications"></label>
+                      </div>
+                    </div>
+                    <div class="form-actions">
+                      <button type="submit" class="save-settings">
+                        Save Preferences
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Preferences -->
+                <div class="settings-section" id="preference-settings">
+                  <h2>Display Preferences</h2>
+                  <form class="settings-form">
+                    <div class="form-group">
+                      <label>Theme</label>
+                      <select>
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="system">System Default</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Grid Size</label>
+                      <select>
+                        <option value="small">Small</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="large">Large</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Language</label>
+                      <select>
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                      </select>
+                    </div>
+                    <div class="form-actions">
+                      <button type="submit" class="save-settings">
+                        Save Preferences
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Billing -->
+                <div class="settings-section" id="billing-settings">
+                  <h2>Billing Information</h2>
+                  <div class="billing-info">
+                    <div class="subscription-status">
+                      <h3>Current Plan</h3>
+                      <div class="plan-badge premium">Premium</div>
+                      <p>Next billing date: March 15, 2024</p>
+                    </div>
+                    <div class="payment-methods">
+                      <h3>Payment Methods</h3>
+                      <div class="payment-card">
+                        <i class="fab fa-cc-visa"></i>
+                        <span>•••• 4242</span>
+                        <button class="edit-card">Edit</button>
+                      </div>
+                    </div>
+                    <div class="billing-history">
+                      <h3>Billing History</h3>
+                      <div class="history-item">
+                        <span>February 15, 2024</span>
+                        <span>$9.99</span>
+                        <span class="status paid">Paid</span>
+                      </div>
+                      <div class="history-item">
+                        <span>January 15, 2024</span>
+                        <span>$9.99</span>
+                        <span class="status paid">Paid</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+      <p>&copy; 2024 WallArtVault. All rights reserved.</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sign in to your WallArtVault account to access your favorite wallpapers, collections, and premium features."
+    />
+    <title>Sign In - WallArtVault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-XXXXX-Y");
+    </script>
+  </head>
+  <body>
+    <header class="categories-header">
+      <nav class="index-nav">
+        <div class="index-nav-left">
+          <a href="index.html" class="nav-logo">
+            <span class="nav-logo-icon">🎨</span>
+            <span>WallArtVault</span>
+          </a>
+          <a href="categories.html">Categories</a>
+          <a href="blog.html">Blog</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="index-nav-right">
+          <a href="sign-in.html" class="active">Sign In</a>
+        </div>
+      </nav>
+    </header>
+    <main class="sign-in-main">
+      <section class="sign-in-form">
+        <h1>Sign In to WallArtVault</h1>
+        <div class="social-sign-in">
+          <button class="social-btn google-btn">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+              alt="Google Logo"
+            />
+            Continue with Google
+          </button>
+          <button class="social-btn apple-btn">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+              alt="Apple Logo"
+            />
+            Continue with Apple
+          </button>
+        </div>
+        <div class="divider">
+          <span>or</span>
+        </div>
+        <form>
+          <div class="form-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" name="remember" /> Remember me
+            </label>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+          </div>
+          <button type="submit" class="sign-in-btn">Sign In</button>
+        </form>
+        <p class="sign-up-prompt">
+          Don't have an account? <a href="sign-up.html">Sign Up</a>
+        </p>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about-us.html">About Us</a>
+      </div>
+      <p>© 2025 WallArtVault. All rights reserved.</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

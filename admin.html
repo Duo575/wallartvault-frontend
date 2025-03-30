@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - WallArtVault</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="admin-page">
+    <div class="admin-layout">
+      <!-- Admin Sidebar -->
+      <aside class="admin-sidebar">
+        <div class="admin-logo">
+          <span class="admin-logo-icon">🎨</span>
+          <span>WallArtVault</span>
+        </div>
+        <nav class="admin-nav">
+          <a href="#" class="active">
+            <i class="fas fa-home"></i>
+            Dashboard
+          </a>
+          <a href="#">
+            <i class="fas fa-image"></i>
+            Wallpapers
+            <span class="badge">1,234</span>
+          </a>
+          <a href="#">
+            <i class="fas fa-folder"></i>
+            Categories
+            <span class="badge">12</span>
+          </a>
+          <a href="#">
+            <i class="fas fa-users"></i>
+            Users
+            <span class="badge">5,678</span>
+          </a>
+          <a href="#">
+            <i class="fas fa-flag"></i>
+            Reports
+            <span class="badge">23</span>
+          </a>
+          <a href="#">
+            <i class="fas fa-chart-bar"></i>
+            Analytics
+          </a>
+          <a href="#">
+            <i class="fas fa-cog"></i>
+            Settings
+          </a>
+        </nav>
+        <div class="admin-profile">
+          <img src="images/admin-avatar.jpg" alt="Admin" />
+          <div class="admin-info">
+            <h4>Admin User</h4>
+            <p>admin@wallartvault.com</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="admin-main">
+        <header class="admin-header">
+          <div class="admin-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+          <div class="admin-actions">
+            <button class="notification-btn">
+              <i class="fas fa-bell"></i>
+              <span class="badge">3</span>
+            </button>
+            <button class="theme-toggle">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </header>
+
+        <div class="admin-content">
+          <!-- Quick Stats -->
+          <div class="admin-stats">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-image"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Total Wallpapers</h3>
+                <p>1,234</p>
+                <span class="trend positive">+12% this month</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-download"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Downloads</h3>
+                <p>45,678</p>
+                <span class="trend positive">+8% this month</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Active Users</h3>
+                <p>5,678</p>
+                <span class="trend positive">+15% this month</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Average Rating</h3>
+                <p>4.8</p>
+                <span class="trend positive">+0.2 this month</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Activity -->
+          <div class="admin-grid">
+            <div class="admin-card">
+              <div class="card-header">
+                <h3>Recent Uploads</h3>
+                <a href="#" class="view-all">View All</a>
+              </div>
+              <div class="recent-uploads">
+                <div class="upload-item">
+                  <img src="images/wallpaper1.jpg" alt="Wallpaper" />
+                  <div class="upload-info">
+                    <h4>Abstract Waves</h4>
+                    <p>Uploaded by @artist123</p>
+                    <span class="time">2 hours ago</span>
+                  </div>
+                </div>
+                <div class="upload-item">
+                  <img src="images/wallpaper2.jpg" alt="Wallpaper" />
+                  <div class="upload-info">
+                    <h4>Mountain Sunset</h4>
+                    <p>Uploaded by @photographer</p>
+                    <span class="time">4 hours ago</span>
+                  </div>
+                </div>
+                <div class="upload-item">
+                  <img src="images/wallpaper3.jpg" alt="Wallpaper" />
+                  <div class="upload-info">
+                    <h4>City Lights</h4>
+                    <p>Uploaded by @designer</p>
+                    <span class="time">6 hours ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="admin-card">
+              <div class="card-header">
+                <h3>Recent Activity</h3>
+                <a href="#" class="view-all">View All</a>
+              </div>
+              <div class="activity-list">
+                <div class="activity-item">
+                  <div class="activity-icon">
+                    <i class="fas fa-download"></i>
+                  </div>
+                  <div class="activity-info">
+                    <p>@user123 downloaded "Abstract Waves"</p>
+                    <span class="time">5 minutes ago</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <div class="activity-info">
+                    <p>@artist456 favorited "Mountain Sunset"</p>
+                    <span class="time">15 minutes ago</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon">
+                    <i class="fas fa-flag"></i>
+                  </div>
+                  <div class="activity-info">
+                    <p>New report received for "City Lights"</p>
+                    <span class="time">1 hour ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- User Management -->
+          <div class="admin-card">
+            <div class="card-header">
+              <h3>Recent Users</h3>
+              <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="user-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Joined</th>
+                    <th>Downloads</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="user-cell">
+                        <img src="images/user1.jpg" alt="User" />
+                        <div>
+                          <h4>John Doe</h4>
+                          <p>@johndoe</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Jan 15, 2024</td>
+                    <td>128</td>
+                    <td><span class="status active">Active</span></td>
+                    <td>
+                      <div class="action-buttons">
+                        <button class="action-btn">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn">
+                          <i class="fas fa-ban"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="user-cell">
+                        <img src="images/user2.jpg" alt="User" />
+                        <div>
+                          <h4>Jane Smith</h4>
+                          <p>@janesmith</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>Jan 14, 2024</td>
+                    <td>256</td>
+                    <td><span class="status premium">Premium</span></td>
+                    <td>
+                      <div class="action-buttons">
+                        <button class="action-btn">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn">
+                          <i class="fas fa-ban"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
